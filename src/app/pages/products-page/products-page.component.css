@@ -1,0 +1,45 @@
+.card-title{
+    text-align: center;
+
+}
+.card-text{
+    font-size: 25px;
+    color: red;
+    text-align: end;
+
+
+}
+.card-body{
+    border-top: 1px rgb(190, 190, 190) solid;
+}
+.visually-hidden{
+ color: blue;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%; /* Centrarlas verticalmente */
+  transform: translateY(-50%); /* Ajustar para estar centradas */
+}
+.carousel-control-prev {
+    left: -70px; /* Mueve la flecha izquierda más hacia afuera */
+    
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-color: black;
+}
+.ajuste {
+    width: 100%; /* Ancho completo del contenedor */
+    height: auto; /* Mantiene la proporción */
+    max-height: 250px; /* Limita la altura máxima */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+  } 
+  
+ .border{
+    color: white;
+    font-size: 15px;
+    background-color: rgb(65, 55, 55);
+    border-radius: 40px;
+    border-color: black;
+    
+    
+ }

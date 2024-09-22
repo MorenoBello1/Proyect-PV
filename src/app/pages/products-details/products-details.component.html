@@ -1,0 +1,29 @@
+<div class="container text-center ">
+    <h1>Products details !</h1>
+    <div class="border">
+        <img src={{product.imageUrl}} alt="AA">
+        <div class="row">
+
+            <div class="col">
+                Producto: {{product.name}}  
+                {{product.category.nameC}}
+
+                <div>
+                    {{product.price | currency}}
+                </div>
+             </div>
+            <div class="">
+                Total: {{product.stock}}
+                <br>
+                Fecha: {{ product.createdAt | date: 'M/d/yy' }}
+
+            </div>
+        </div>
+        
+    </div>
+    
+
+
+
+
+</div>
