@@ -19,11 +19,18 @@
 
             </div>
         </div>
-        
+        <button (click)="update()" class="btn btn-primary">Modificar</button>
+
     </div>
-    
-
-
-
 
 </div>
+
+@if(viewUpdate){
+<div class="container">
+    <app-products-details-update 
+    (CloseUpdatePage)="viewUpdate = $event" 
+     [producto]="product" 
+     (ProductoUpdate)="product = $event"
+    ></app-products-details-update>
+</div>    
+}

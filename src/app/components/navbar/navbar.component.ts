@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input, OnInit, Output } from '@angular/core';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { ComprasService } from '../../services/compras.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +9,8 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent  {
+
+ 
 
 }

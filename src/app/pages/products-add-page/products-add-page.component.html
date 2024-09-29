@@ -1,13 +1,92 @@
-<p>products-add-page works!</p>
-<div class="container">
-    <input type="text" value="Text">
-    <input type="text" value="Text">
-    <input type="text" value="Text">
-    <input type="text" value="Text">
-    <input type="text" value="Text">
-    <input type="text" value="Text">
-    <input type="text" value="Text">
-    <input type="text" value="Text">
 
-    <button type="button " (click)="Confirmar()">Confirmar</button>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="Confirmar()">  <!-- Cambiado a ngSubmit -->
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Imagen URL</label>
+          <input class="form-control" type="text" id="formFile" formControlName="imageUrl">
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="m-3">
+          <label for="id" class="form-label">ID</label>
+          <input type="number" id="id" class="form-control" formControlName="id">
+        </div>
+
+        <div class="m-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" id="name" class="form-control" formControlName="name">
+        </div>
+
+        <div class="m-3">
+          <label for="price" class="form-label">Precio</label>
+          <input type="number" id="price" class="form-control" formControlName="price">
+        </div>
+
+        <div class="m-3">
+          <label for="stock" class="form-label">Stock</label>
+          <input type="number" id="stock" class="form-control" formControlName="stock">
+        </div>
+
+        <div class="m-3">
+          <label for="sku" class="form-label">Código SKU</label>
+          <input type="text" id="sku" class="form-control" formControlName="sku">
+        </div>
+
+        <div class="m-3">
+          <label for="rating" class="form-label">Calificación</label>
+          <input type="number" id="rating" class="form-control" formControlName="rating">
+        </div>
+
+        <div class="m-3">
+          <label for="discount" class="form-label">Descuento</label>
+          <input type="number" id="discount" class="form-control" formControlName="discount">
+        </div>
+
+        <div class="m-3">
+          <label for="createdAt" class="form-label">Fecha de Creación</label>
+          <input type="date" id="createdAt" class="form-control" formControlName="createdAt">
+        </div>
+
+        <div class="m-3">
+          <label for="description" class="form-label">Descripción</label>
+          <textarea id="description" class="form-control" formControlName="description"></textarea>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Sección de Categoría anidada dentro del formulario -->
+    <div formGroupName="category">  
+      <div class="m-3">
+        <label for="idC" class="form-label">ID de Categoría</label>
+        <input type="number" id="idC" class="form-control" formControlName="idC">
+      </div>
+
+      <div class="m-3">
+        <label for="nameC" class="form-label">Nombre de Categoría</label>
+        <input type="text" id="nameC" class="form-control" formControlName="nameC">
+      </div>
+
+      <div class="m-3">
+        <label for="descriptionC" class="form-label">Descripción de Categoría</label>
+        <input type="text" id="descriptionC" class="form-control" formControlName="descriptionC">
+      </div>
+
+      <div class="m-3">
+        <label for="imageUrlC" class="form-label">Imagen de Categoría</label>
+        <input type="text" id="imageUrlC" class="form-control" formControlName="imageUrlC">
+      </div>
+
+      <div class="m-3">
+        <label for="createdAtC" class="form-label">Fecha Creación Categoría</label>
+        <input type="date" id="createdAtC" class="form-control" formControlName="createdAtC">
+      </div>
+    </div>
+
+    <!-- Botón para enviar el formulario -->
+    <button type="submit" class="btn btn-primary">Confirmar</button> <!-- Botón de envío -->
+  </form>
 </div>

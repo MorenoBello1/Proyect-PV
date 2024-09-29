@@ -2,12 +2,20 @@
 @if (viewinput) 
 {
   
-  <app-products-add-page></app-products-add-page>
+  <app-products-add-page (closeAddPage)="viewinput = $event"></app-products-add-page>
 
 }
-
-<div class="p-3"></div>
-
+@if(aumentar>=1){
+  <div class="p-3"></div>
+  <button type="button" class="btn btn-primary position-fixed  z-index-1000 ">
+    Compras
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      {{aumentar}}
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </button>
+}
+ 
 <!--<div class="container">
   <div class="row">
     <div class="col-4 ">
@@ -83,4 +91,70 @@
     </div>
   </div>
 </div>
+<div class="p-4"></div>
+<div class="p-4"></div>
+<div class="container">
+  <hr>
+  <div class=" row">
+    <div class="col-12 d-flex ">
+      <div class="col-4  ">
+        <h1 class="p-4">Alls the Products</h1>
+        
+      </div>
+      <div class="col-1 d-flex justify-content-center"> <!-- Cambios aquí -->
+        <div class="align-self-center"> <!-- Un contenedor adicional -->
+          <select class="botoncitosexual">
+            @for (item of ListProducts; track $index) 
+            {
+              <option value="">{{item.category.nameC }}</option>
+            }
+          </select> 
+      </div>
+        
+    </div>
+    
+  </div>
+  
+  <div class="row row2">
+    @for (item of ListProducts; track item.id) 
+    {
+      <div class="col-2 col2 d-flex align-items-stretch px-3 m-3"> 
+        <div class="card card2" style="width: 30rem;" (click)="Compras()">
+          <img src={{item.imageUrl}} class="card-img-top card-img-top2 ajuste" alt="Producto">
+          <div class="card-body">
+            <h5 class="card-title"> {{item.category.nameC}}</h5>
+            <p class="card-text text-center">{{item.price | currency}}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
+
+<!--
+<div class="container">
+  <div class="row ">
+    @for (item of ListProducts; track item.id) 
+    {
+      <div class="col px-3 m-3"> 
+        <div class="card" (click)="Observar(item.id)" style="width: 15rem; ">
+          <img src={{item.imageUrl}} class="card-img-top ajuste" >
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}} - {{item.category.nameC}} </h5>
+            <p class="card-text">{{item.price | currency }}</p>
+  
+          </div>
+        </div>
+
+      </div>
+      
+      
+      
+    }
+  </div>
  
+</div>
+-->
+
+

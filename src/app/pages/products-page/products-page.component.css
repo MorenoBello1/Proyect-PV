@@ -43,3 +43,38 @@
     
     
  }
+ 
+
+ .card2 {
+    min-height: 100%; /* Hace que todas las cards tengan la misma altura */
+  }
+  
+  .card-img-top2 {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Ajusta la imagen dentro de su contenedor sin deformarla */
+  }
+  
+  .row2 {
+    display: flex; /* Flexbox para asegurarse de que todas las columnas tengan la misma altura */
+    flex-wrap: wrap;
+  }
+  
+  .col2 {
+    display: flex;
+    align-items: stretch; /* Hace que las columnas tengan la misma altura */
+  }
+  .botoncitosexual{
+    border-radius: 30px;
+
+    
+  }
+
+  .btn {
+    position: fixed; /* Fija el botón en la ventana del navegador */
+    z-index: 1050; /* Un valor alto para que esté encima de otros elementos */
+  }
+  
+  .badge {
+    top: -10px; /* Ajusta la posición vertical del badge */
+    left: 10px; /* Ajusta la posición horizontal del badge */
+  }
